@@ -1,0 +1,91 @@
+<doctype html>
+    <html>
+    <head>
+    <meta charset="utf-8"/>
+    <!-- <a href="_css/estilo.css> para abrir em outra aba target="_blanck" -->
+    <link type="text/css" rel="stylesheet" href="_css/estilo.css" />
+    <link rel="stylesheet" type="text/css" href="_css/specs.css" />
+    <!--Alterar as imagens do menu <script type="text/javascript"></script> -->
+    <script type="text/javascript">
+     function mudaFoto (foto) {
+         document.getElementById('icone').src = foto;
+     }
+
+    </script>
+    <title>Google Glass</title>
+    </head>
+    
+    <body>
+        <div id="interface">
+        <header id="cabecalho">  
+        <!--para agrupar esse grupo utilizamos <hgroup> semantica -->
+            <hgroup>
+        <h1>Google Glass</h1>
+        <h2>A revolução do Google está chegando</h2>
+        <!--para agrupar esse grupo utilizamos <hgroup> -->
+        </hgroup>
+        <img id="icone"src="_imagens/glass-oculos-preto-peq.png"/>
+         <!--tudo que tiver dentro do meu <nav> será a parte de navegação do meu menu -->
+         <!--as lista ordenadas(ol) e desordenadas do meu menu(ul) intens de listas(li) -->
+        <!-- os tipos de listas <ol type="A"(alfabetica),  <ol type="1"(numero)>,  <ol type="i"(romano)> 
+          para continuar da onde parou coloca  <ol type="A" star="2"> o star só aceita valores numericos-->
+         <!--as lista desordenadas(ul) <ol type="square" "disc" "circle" quadrado, circulo e circulo vazio -->  
+        <nav id="menu">
+        <h1>Menu Principal</h1>
+        <ul>   <!--onmouseover="mudaFoto('_imagens/home.png')"=Ele esta chamando a função mudaFoto para alterar a imagem para home e para quando tirar o mouse de cima home voltar para a imagem do oculos  -->
+         <li onmouseover="mudaFoto('_imagens/home.png')"  onmouseout="mudaFoto('_imagens/glass-oculos-preto-peq.png')"><a href="index.html">Home</a></li>
+
+         <li onmouseover="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto('_imagens/glass-oculos-preto-peq.png')"><a href="specs.html" >Especificações</a></li>
+
+         <li onmouseover="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/glass-oculos-preto-peq.png')"><a href="fotos.html">Fotos</a></li>  
+
+         <li onmouseover="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/glass-oculos-preto-peq.png')"><a href="multimidia.html">Multimídia</a></li>
+
+         <li onmouseover="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/glass-oculos-preto-peq.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+        </ul>
+        </nav>
+         </header>
+ 
+<section id="corpo-full">
+    <article id="noticia-principal">
+        <header id="cabecalho-artigo">
+        <hgroup>
+        <h3>Glass > Especificações</h3>
+        <h1>Raio-X no Google Glass</h1>
+        <h2>por Gustavo Guanabara</h2>
+        <h3 class="direita">Atualizado em 01/Maio/2013</h3>
+        </hgroup>
+        </header>
+
+<p>Clique em qualquer área destacada da imagem para ter mais informações sobre os recursos do Google Glass. Qualquer ponto vermelho vai te levar a um lugar cheio de novas informações.
+</p>
+
+<section id="conteudo">
+    <!--   Agora vamos fazer que quando clickarmos nas partes vermelhas mudar o iframe
+    usando a tag map tudo que tiver dentro do map será relativo a imagem
+    precisamos nomear esse map=meumapa e colocar usemap e o nome que eu nome para ele.
+           Todo mapa é composto de areas e as areas tem 3 tipos de shape circulo, retangulos=rect e polignal
+    depois precisa colocar as minhas coordenadas e para isso vai precisar do editor de imagem.
+    para colocar as cordenadas primeiro X e depois o Y
+    para a area circular o X E O Y E O RAIO-->
+<img src="_imagens/glass-esquema-marcado.jpg" usemap="#meumapa"/>
+<map name="meumapa">
+ <area shape="rect" coords="193,213,269,245" href="google-glass.html#tela" target="janela"/>
+ <area shape="circle" coords="156,239,12" href="google-glass.html#camera" target="janela"/>
+ <area shape="poly" coords="31,143,83,212,27,163,79,237" href="google-glass.html#sensores" target="janela"/>
+ <area shape="circle" coords="78,50,9" href="google-glass.html#bateria" target="janela"/>
+</map>
+<iframe src="google-glass.html" name="janela" id="frame-specs"></iframe>
+</section>
+
+</section>
+ <footer id="rodape">
+        <!-- Roda pé -->
+    <p> Copyright 2013 - by Gustavo Guanabara
+        Facebook | Twitter</p> 
+        </footer>
+       
+    
+    </div>
+    </body>
+    </html>

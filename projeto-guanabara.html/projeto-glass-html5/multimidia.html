@@ -1,0 +1,81 @@
+<doctype html>
+    <html>
+    <head>
+    <meta charset="utf-8"/>
+    <!-- <a href="_css/estilo.css> para abrir em outra aba target="_blanck" -->
+    <link type="text/css" rel="stylesheet" href="_css/estilo.css" />
+    <link type="text/css" rel="stylesheet" href="_css/media.css" />
+    <title>Media</title>
+    </head>
+    <script>
+    function mudaFoto(foto){
+    document.getElementById('icone').src = foto ;
+
+    }
+
+    </script>
+    
+    <body>
+        <div id="interface">
+        <header id="cabecalho">  
+        <!--para agrupar esse grupo utilizamos <hgroup> semantica -->
+            <hgroup>
+        <h1>Google Glass</h1>
+        <h2>A revolução do Google está chegando</h2>
+        <!--para agrupar esse grupo utilizamos <hgroup> -->
+        </hgroup>
+        <img id="icone"src="_imagens/glass-oculos-preto-peq.png"/>
+         <!--tudo que tiver dentro do meu <nav> será a parte de navegação do meu menu -->
+         <!--as lista ordenadas(ol) e desordenadas do meu menu(ul) intens de listas(li) -->
+        <!-- os tipos de listas <ol type="A"(alfabetica),  <ol type="1"(numero)>,  <ol type="i"(romano)> 
+          para continuar da onde parou coloca  <ol type="A" star="2"> o star só aceita valores numericos-->
+         <!--as lista desordenadas(ul) <ol type="square" "disc" "circle" quadrado, circulo e circulo vazio -->  
+        <nav id="menu">
+        <h1>Menu Principal</h1>
+        <ul>
+         <li onmousemove="mudaFoto('_imagens/Home.png')"><a href="index.html" onmouseout="mudaFoto('_imagens/glass-oculos-preto-peq.png')">Home</a></li>
+         <li onmousemove="mudaFoto('_imagens/especificacoes.png')"><a href="specs.html"  onmouseout="mudaFoto('_imagens/glass-oculos-preto-peq.png')">Especificações</a></li>
+         <li onmousemove="mudaFoto('_imagens/fotos.png')"><a href="fotos.html" onmouseout="mudaFoto('_imagens/glass-oculos-preto-peq.png')">Fotos</a></li>  
+         <li onmousemove="mudaFoto('_imagens/multimidia.png')"><a href="multimidia.html" onmouseout="mudaFoto('_imagens/glass-oculos-preto-peq.png')">Multimídia</a></li>
+         <li onmousemove="mudaFoto('_imagens/contato.png')"><a href="fale-conosco.html"  onmouseout="mudaFoto('_imagens/glass-oculos-preto-peq.png')">Fale conosco</a></li>
+        </ul>
+        </nav>
+        </header>
+        <!--Sessão=section -->
+         <section id="corpo-full">
+        <!--Artigo -->
+        <article id="noticia-principal">
+        <header id="cabecalho-artigo">
+        <hgroup>
+        <h3>Glass > Multimídia</h3>
+        <h1>Sons e Vídeos</h1>
+        <h2>por Gustavo Guanabara</h2>
+        <h3 class="direita">Atualizado em 01/Maio/2013</h3>
+        </hgroup>
+        </header>
+
+<div id="tv-radio"><!--controls="controls"> e para a estrutura do audio aparecer-->
+<audio id="musica" controls="controls">
+<!--Vamos colocar uma musica de fundo usando a tag source src="" />-->
+<source src="D:\projeto-guanabara.html\_media\2009-lovers-carvings-bibio.mp3" type="audio/mpeg"/>
+<source src="D:\projeto-guanabara.html\_media\2009-lovers-carvings-bibio.m4a" type="audio/mpeg"/>
+<source src="D:\projeto-guanabara.html\_media\2009-lovers-carvings-bibio.ogg" type="audio/mpeg"/>
+</audio>
+<video id="filme" controls="controls" poster="_imagens\video-mini03.jpg">
+<source src="D:\projeto-guanabara.html\_media\getting-started.mp4" type="video/mp4"/>
+<source src="D:\projeto-guanabara.html\_media\2009-lovers-carvings-bibio.webm" type="video/webm"/>
+<source src="D:\projeto-guanabara.html\_media\2009-lovers-carvings-bibio.ogv" type="video/ogg"/>
+
+</video>
+</div>
+</article>
+</section>
+<footer id="rodape">
+        <!-- Roda pé -->
+    <p> Copyright 2013 - by Gustavo Guanabara
+        Facebook | Twitter</p> 
+        </footer>
+    
+    </div>
+    </body>
+    </html>
